@@ -1,6 +1,6 @@
 class Game:
     """
-    	- Features
+    - Features
 		○ Players - list (crucially ordered!)
 		○ Index_of_active_player
 		○ Deck

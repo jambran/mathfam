@@ -1,5 +1,5 @@
 from .card import Card
-
+import random
 
 class Deck:
     def __init__(self):
@@ -14,6 +14,11 @@ class Deck:
     def show(self):  # needs to be included in Card for this function to work
         for c in self.cards:
             c.show()
+
+    def shuffle(self):
+        for i in range(len(self.cards)-1,0,-1): # reverses the list
+            r = random.randomint(0,i) # picks random number left of the current position
+            self.cards[i], self.cards[r] = self.cards[r], self.cards[i] #swaps position of cards in position i and r
 
     """
     - Features

@@ -10,6 +10,9 @@ class Card:
     def Get_suit(self):  # gets the suit
         return self.suit
 
+    def show(self):
+        print("{} or {}".format(self.rank, self.suit))
+
     def Get_color(self):  # gets the color
         if self.Get_suit() == 'Hearts' or self.Get_suit() == 'Diamonds':
             return 'Red'

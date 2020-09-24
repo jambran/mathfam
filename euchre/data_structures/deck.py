@@ -19,7 +19,8 @@ class Deck:
         for i in range(len(self.cards)-1,0,-1): # reverses the list
             r = random.randomint(0,i) # picks random number left of the current position
             self.cards[i], self.cards[r] = self.cards[r], self.cards[i] #swaps position of cards in position i and r
-
+    def draw(self):
+        return self.cards.pop()
     """
     - Features
 		○ Cards - dictionary (mapping (index of shuffle to Card))?

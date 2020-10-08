@@ -6,3 +6,5 @@ class Player:
 		○ Is_dealer
 
     """
+    def __init__(self, name):
+        self.name = name

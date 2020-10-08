@@ -23,9 +23,15 @@ def main():
 
     play_again = True
     while play_again:
-        r = Round()
+        round = Round(players)
+        winners = round.play()
+        print(f"Congrats to our winning team, {winners}!\n")
+
         response = input('Would you like to play again? [y/n]')
         play_again = response.lower().startswith('y')
+
+    names = ','.join([str(player) for player in players])
+    print(f'Thanks for playing, {names}!')
 
 
 if __name__ == '__main__':
